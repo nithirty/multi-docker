@@ -10,14 +10,14 @@ script:
   - docker run -e CI=true nk/react-test npm test
 
 after_success:
-  - docker build -t nk/multi-client ./client
-  - docker build -t nk/multi-nginx ./nginx
-  - docker build -t nk/multi-server ./server
-  - docker build -t nk/multi-worker ./worker
+  - docker build -t nitishkr/multi-client ./client
+  - docker build -t nitishkr/multi-nginx ./nginx
+  - docker build -t nitishkr/multi-server ./server
+  - docker build -t nitishkr/multi-worker ./worker
 # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin docker.io
 # Take those images and push them to docker hub
-  - docker push nk/multi-client
-  - docker push nk/multi-nginx
-  - docker push nk/multi-server
-  - docker push nk/multi-worker
+  - docker push nitishkr/multi-client
+  - docker push nitishkr/multi-nginx
+  - docker push nitishkr/multi-server
+  - docker push nitisgkr/multi-worker

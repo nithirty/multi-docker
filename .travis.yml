@@ -20,4 +20,4 @@ after_success:
   - docker push nitishkr/multi-client
   - docker push nitishkr/multi-nginx
   - docker push nitishkr/multi-server
-  - docker push nitisgkr/multi-worker
+  - docker push nitishkr/multi-worker
